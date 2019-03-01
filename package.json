@@ -1,6 +1,6 @@
 {
   "name": "@time-with/modal",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React redux-driven Modal system",
   "main": "dist/index.js",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "prepack": "yarn && babel src --out-dir dist --source-maps --presets es2015,stage-0,react && rm -rf node_modules",
     "postpack": "rm -rf node_modules"
   },
-  "devDependencies": {
+  "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-svg-core": "^1.2.0",
     "@fortawesome/react-fontawesome": "^0.1.0",
