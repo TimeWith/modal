@@ -1,43 +1,46 @@
-# Popup
+# Timewith Modal
 
-React redux-driven Popup system.
+Timewith Modal
 
 ## Install
 
 With [npm](http://npmjs.org) do:
 
 ```bash
-$ npm install @time-with/popup
+$ npm install @time-with/modal
 or
-$ yarn add @time-with/popup
+$ yarn add @time-with/modal
 ```
 
 ## Setup
 
-Add the Component to the root Router of your React layout
+Add the module to the root Router of the React layout
 
-    import Popup from '@time-with/popup'
+    import TWModal from '@time-with/modal'
 
     render() {
       return (
         <Router>
           <div id='layout-root'>
-            <Popup />
+            <TWModal />
             // ...
 
 Import the reducer to your reducers combiner
     
-    import { popupReducer } from '@time-with/popup';
-    export {
-      // other reducers
-      popupReducer,
-    };
+    this.props.actions.showModal({
+      title: 'Are you sure?',
+      description: 'By deleting your location, all associated fees and availability slots will be lost.',
+      showButtonA: true,
+      showButtonB: true,
+      buttonACustomHandler: this.testAtIndex,
+      buttonACustomHandlerParameter: removeIndex,
+    });
 
 ## Usage
 
-    import { popupActions } from '@time-with/popup';
+    import { showModal } from '@time-with/modal';
 
-    popupActions.showPopup( <SomeReactComponent /> );
+    actions.modal( <SomeReactComponent /> );
 
 
 ## License
