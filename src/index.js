@@ -39,8 +39,8 @@ const defaults = {
   buttonBIcon: 'times',
   buttonACustomHandler: null,
   buttonBCustomHandler: null,
-  buttonACustomHandlerParameter: null,
-  buttonBCustomHandlerParameter: null,
+  buttonACustomHandlerParameters: null,
+  buttonBCustomHandlerParameters: null,
   closeOnButtonAClick: true,
   closeOnButtonBClick: true,
 }
@@ -53,21 +53,25 @@ class TWModal extends Component {
 
   handleButtonA = () => {
     const { 
-      buttonACustomHandler,
       closeOnButtonAClick,
-      buttonACustomHandlerParameter,
+      buttonACustomHandler,
+      buttonACustomHandlerParameters,
     } = this.props
-    if (buttonACustomHandler) { buttonACustomHandler(buttonACustomHandlerParameter) }
+    if (buttonACustomHandler) {
+      buttonACustomHandler(buttonACustomHandlerParameters.length > 0 ? ...buttonACustomHandlerParameters : buttonACustomHandlerParameters)
+    }
     if (closeOnButtonAClick) { this.handleClose() }
   }
 
   handleButtonB = () => {
     const { 
-      buttonBCustomHandler,
       closeOnButtonBClick,
-      buttonBCustomHandlerParameter,
+      buttonBCustomHandler,
+      buttonACustomHandlerParameters,
     } = this.props
-    if (buttonBCustomHandler) { buttonBCustomHandler(buttonBCustomHandlerParameter) }
+    if (buttonACustomHandler) {
+      buttonACustomHandler(buttonBCustomHandlerParameters.length > 0 ? ...buttonBCustomHandlerParameters : buttonBCustomHandlerParameters)
+    }
     if (closeOnButtonBClick) { this.handleClose() }
   }
 
@@ -159,8 +163,8 @@ export const showModal = function(modalData) {
     buttonBIcon: modalData.buttonBIcon || defaults.buttonBIcon,
     buttonACustomHandler: modalData.buttonACustomHandler,
     buttonBCustomHandler: modalData.buttonBCustomHandler,
-    buttonACustomHandlerParameter: modalData.buttonACustomHandlerParameter,
-    buttonBCustomHandlerParameter: modalData.buttonBCustomHandlerParameter,
+    buttonACustomHandlerParameters: modalData.buttonACustomHandlerParameters,
+    buttonBCustomHandlerParameters: modalData.buttonBCustomHandlerParameters,
     closeOnButtonAClick: modalData.closeOnButtonAClick || defaults.closeOnButtonAClick,
     closeOnButtonBClick: modalData.closeOnButtonBClick || defaults.closeOnButtonBClick,
   }
@@ -193,8 +197,8 @@ export function modalReducer(state = {
   buttonBIcon: defaults.buttonBIcon,
   buttonACustomHandler: defaults.buttonACustomHandler,
   buttonBCustomHandler: defaults.buttonBCustomHandler,
-  buttonACustomHandlerParameter: defaults.buttonACustomHandlerParameter,
-  buttonBCustomHandlerParameter: defaults.buttonBCustomHandlerParameter,
+  buttonACustomHandlerParameters: defaults.buttonACustomHandlerParameters,
+  buttonBCustomHandlerParameters: defaults.buttonBCustomHandlerParameters,
   closeOnButtonAClick: defaults.closeOnButtonAClick,
   closeOnButtonBClick: defaults.closeOnButtonBClick,
 }, action) {
@@ -223,8 +227,8 @@ export function modalReducer(state = {
         buttonBIcon: action.buttonBIcon,
         buttonACustomHandler: action.buttonACustomHandler,
         buttonBCustomHandler: action.buttonBCustomHandler,
-        buttonACustomHandlerParameter: action.buttonACustomHandlerParameter,
-        buttonBCustomHandlerParameter: action.buttonBCustomHandlerParameter,
+        buttonACustomHandlerParameters: action.buttonACustomHandlerParameters,
+        buttonBCustomHandlerParameters: action.buttonBCustomHandlerParameters,
         closeOnButtonAClick: action.closeOnButtonAClick,
         closeOnButtonBClick: action.closeOnButtonBClick,
       };
@@ -264,8 +268,8 @@ const mapStoreToProps = ( store ) => {
     buttonBIcon: store.modalReducer.buttonBIcon,
     buttonACustomHandler: store.modalReducer.buttonACustomHandler,
     buttonBCustomHandler: store.modalReducer.buttonBCustomHandler,
-    buttonACustomHandlerParameter: store.modalReducer.buttonACustomHandlerParameter,
-    buttonBCustomHandlerParameter: store.modalReducer.buttonBCustomHandlerParameter,
+    buttonACustomHandlerParameters: store.modalReducer.buttonACustomHandlerParameters,
+    buttonBCustomHandlerParameters: store.modalReducer.buttonBCustomHandlerParameters,
     closeOnButtonAClick: store.modalReducer.closeOnButtonAClick,
     closeOnButtonBClick: store.modalReducer.closeOnButtonBClick,
   }

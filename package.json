@@ -1,6 +1,6 @@
 {
   "name": "@time-with/modal",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React redux-driven Modal system",
   "main": "dist/index.js",
   "license": "MIT",
