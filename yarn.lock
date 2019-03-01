@@ -96,6 +96,10 @@
   dependencies:
     babel-plugin-emotion "^9.2.6"
 
+"@time-with/buttons@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/@time-with/buttons/-/buttons-0.0.1.tgz#e0b8cdb3447050f224f57a750a844a02b69f0a2d"
+
 "@time-with/media-queries@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@time-with/media-queries/-/media-queries-1.0.4.tgz#28cb374e80bc2292f09b17ab057c9bc6ddc34ed9"

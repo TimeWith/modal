@@ -14,6 +14,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.0",
     "@fortawesome/react-fontawesome": "^0.1.0",
     "@time-with/atoms": "^0.2.8",
+    "@time-with/buttons": "^0.0.1",
     "@time-with/media-queries": "^1.0.3",
     "app-levels": "^1.0.5",
     "babel-plugin-emotion": "^9.2.6",
