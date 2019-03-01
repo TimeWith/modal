@@ -27,20 +27,19 @@ Add the module to the root Router of the React layout
 
 Import the reducer to your reducers combiner
     
-    this.props.actions.showModal({
-      title: 'Are you sure?',
-      description: 'By deleting your location, all associated fees and availability slots will be lost.',
-      showButtonA: true,
-      showButtonB: true,
-      buttonACustomHandler: this.testAtIndex,
-      buttonACustomHandlerParameter: removeIndex,
-    });
+    
+    import { modalReducer } from '@time-with/modal';
+
+    
 
 ## Usage
 
-    import { showModal } from '@time-with/modal';
+    import { modalReducer } from '@time-with/modal';
 
-    actions.modal( <SomeReactComponent /> );
+    export default combineReducers({
+      modalReducer,
+      ...other reducers
+    });
 
 
 ## License
