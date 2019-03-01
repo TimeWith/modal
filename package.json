@@ -1,6 +1,6 @@
 {
   "name": "@time-with/modal",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "React redux-driven Modal system",
   "main": "dist/index.js",
   "license": "MIT",
@@ -10,6 +10,15 @@
     "postpack": "rm -rf node_modules"
   },
   "devDependencies": {
+    "babel-plugin-emotion": "^9.2.6",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "peerDependencies": {
+    "react": "^16.1.1",
+    "react-emotion": "^9.2.6",
+    "react-redux": "^5.0.6",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-svg-core": "^1.2.0",
     "@fortawesome/react-fontawesome": "^0.1.0",
@@ -17,13 +26,12 @@
     "@time-with/buttons": "^0.0.1",
     "@time-with/media-queries": "^1.0.3",
     "app-levels": "^1.0.5",
-    "babel-plugin-emotion": "^9.2.6",
     "emotion": "^9.2.6",
     "react": "^16.1.1",
     "react-emotion": "^9.2.6",
-    "react-redux": "^5.0.6",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "react-redux": "^5.0.6"
   }
 }
+
+
+

@@ -58,7 +58,11 @@ class TWModal extends Component {
       buttonACustomHandlerParameters,
     } = this.props
     if (buttonACustomHandler) {
-      buttonACustomHandler(buttonACustomHandlerParameters.length > 0 ? ...buttonACustomHandlerParameters : buttonACustomHandlerParameters)
+      let params =  buttonACustomHandlerParameters
+      if (!Array.isArray(params)) {
+        params = [params]
+      }
+      buttonACustomHandler(...params)
     }
     if (closeOnButtonAClick) { this.handleClose() }
   }
@@ -67,10 +71,14 @@ class TWModal extends Component {
     const { 
       closeOnButtonBClick,
       buttonBCustomHandler,
-      buttonACustomHandlerParameters,
+      buttonBCustomHandlerParameters,
     } = this.props
     if (buttonACustomHandler) {
-      buttonACustomHandler(buttonBCustomHandlerParameters.length > 0 ? ...buttonBCustomHandlerParameters : buttonBCustomHandlerParameters)
+      let params =  buttonBCustomHandlerParameters
+      if (!Array.isArray(params)) {
+        params = [params]
+      }
+      buttonACustomHandler(...params)
     }
     if (closeOnButtonBClick) { this.handleClose() }
   }
