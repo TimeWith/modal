@@ -1,6 +1,6 @@
 {
   "name": "@time-with/modal",
-  "version": "1.1.0",
+  "version": "1.1.11",
   "description": "React redux-driven Modal system",
   "main": "dist/index.js",
   "license": "MIT",
@@ -19,13 +19,13 @@
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
     "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-svg-core": "^1.2.0",
     "@fortawesome/react-fontawesome": "^0.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "@time-with/atoms": "^0.2.8",
     "@time-with/buttons": "^0.0.1",
     "@time-with/media-queries": "^1.0.3",
     "app-levels": "^1.0.5",
-    "emotion": "^9.2.6",
     "react": "^16.1.1",
     "react-redux": "^5.0.6"
   }
