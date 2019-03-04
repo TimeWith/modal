@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from '@emotion/styled';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Headline2, Paragraph } from '@time-with/atoms';
