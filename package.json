@@ -1,6 +1,6 @@
 {
   "name": "@time-with/modal",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "React redux-driven Modal system",
   "main": "dist/index.js",
   "license": "MIT",
@@ -21,7 +21,6 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/react-fontawesome": "^0.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
-    "@fortawesome/react-fontawesome": "^0.1.4",
     "@time-with/atoms": "^0.2.8",
     "@time-with/buttons": "^0.0.1",
     "@time-with/media-queries": "^1.0.3",
