@@ -132,7 +132,7 @@ class TWModal extends Component {
     return (
       <RootDiv id='tw-modal-background' backgroundColor={backgroundColor}>
         <Window id='tw-modal-window' style={{backgroundColor: windowColor}}>
-          <Headline2 style={{color: colorTitle}}>{title}</Headline2>
+          <Headline2 style={{maxWidth: '500px', color: colorTitle}}>{title}</Headline2>
           <br />
           { !hideDescription && <Paragraph style={{maxWidth: '500px', color: colorDescription}}>{description}</Paragraph> }
           <br />
