@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Headline2, Paragraph } from '@time-with/atoms';
-import FontAwesome from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   ButtonsRow,
   ButtonGreen,
@@ -51,7 +51,7 @@ class TWModal extends Component {
   }
 
   handleButtonA = () => {
-    const { 
+    const {
       closeOnButtonAClick,
       buttonACustomHandler,
       buttonACustomHandlerParameters,
@@ -67,7 +67,7 @@ class TWModal extends Component {
   }
 
   handleButtonB = () => {
-    const { 
+    const {
       closeOnButtonBClick,
       buttonBCustomHandler,
       buttonBCustomHandlerParameters,
@@ -104,7 +104,7 @@ class TWModal extends Component {
     return (
       <Button onClick={this[`handleButton${which}`]}>
         <p>{text}</p>
-        <FontAwesome icon={icon} />
+        <FontAwesomeIcon icon={icon} />
       </Button>
     )
   }
